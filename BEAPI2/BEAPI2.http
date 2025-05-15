@@ -1,0 +1,6 @@
+@BEAPI2_HostAddress = http://localhost:3002
+
+GET {{BEAPI2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
