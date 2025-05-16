@@ -1,7 +1,6 @@
 {
-  "name": "Dotnet-Docker Dev",
   "build": {
-    "dockerfile": "docker/Dockerfile",
+    "dockerfile": "Dockerfile",
     "context": ".."
   },
   "customizations": {
@@ -15,7 +14,7 @@
     }
   },
   "mounts": [
-    "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ],
   "runArgs": ["--privileged"]
 }
