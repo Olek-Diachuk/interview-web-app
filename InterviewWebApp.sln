@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFF", "BFF\BFF.csproj", "{4EF4B1F6-7064-4294-995E-9ED3C49AC45A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{27B2BA11-026D-40A8-B50F-CADB1F9950C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory Service API", "Inventory Service API\Inventory Service API.csproj", "{D9FF9AB4-B4E2-421D-8ED7-07AB5E906847}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{FEF9903C-AFBE-48E8-BC97-5D1BECC25107}"
+	ProjectSection(SolutionItems) = preProject
+		docker\Dockerfile = docker\Dockerfile
+		docker\start.sh = docker\start.sh
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment Service API", "Payment Service API\Payment Service API.csproj", "{78B99B0F-11D4-4C46-81EA-70159024A1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BFF", "src\BFF\BFF.csproj", "{4A724A45-D6A0-4C48-985D-6DB7ACD391F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory_Service_API", "src\Inventory_Service_API\Inventory_Service_API.csproj", "{37569E44-8BD6-4184-B8B1-667FC4FFCA37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment_Service_API", "src\Payment_Service_API\Payment_Service_API.csproj", "{AD17F2DF-D328-4C8A-B0C3-67434FC65F41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +23,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4EF4B1F6-7064-4294-995E-9ED3C49AC45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EF4B1F6-7064-4294-995E-9ED3C49AC45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EF4B1F6-7064-4294-995E-9ED3C49AC45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EF4B1F6-7064-4294-995E-9ED3C49AC45A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9FF9AB4-B4E2-421D-8ED7-07AB5E906847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9FF9AB4-B4E2-421D-8ED7-07AB5E906847}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9FF9AB4-B4E2-421D-8ED7-07AB5E906847}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9FF9AB4-B4E2-421D-8ED7-07AB5E906847}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78B99B0F-11D4-4C46-81EA-70159024A1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78B99B0F-11D4-4C46-81EA-70159024A1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78B99B0F-11D4-4C46-81EA-70159024A1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78B99B0F-11D4-4C46-81EA-70159024A1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A724A45-D6A0-4C48-985D-6DB7ACD391F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A724A45-D6A0-4C48-985D-6DB7ACD391F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A724A45-D6A0-4C48-985D-6DB7ACD391F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A724A45-D6A0-4C48-985D-6DB7ACD391F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37569E44-8BD6-4184-B8B1-667FC4FFCA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37569E44-8BD6-4184-B8B1-667FC4FFCA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37569E44-8BD6-4184-B8B1-667FC4FFCA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37569E44-8BD6-4184-B8B1-667FC4FFCA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD17F2DF-D328-4C8A-B0C3-67434FC65F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD17F2DF-D328-4C8A-B0C3-67434FC65F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD17F2DF-D328-4C8A-B0C3-67434FC65F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD17F2DF-D328-4C8A-B0C3-67434FC65F41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A724A45-D6A0-4C48-985D-6DB7ACD391F8} = {27B2BA11-026D-40A8-B50F-CADB1F9950C2}
+		{37569E44-8BD6-4184-B8B1-667FC4FFCA37} = {27B2BA11-026D-40A8-B50F-CADB1F9950C2}
+		{AD17F2DF-D328-4C8A-B0C3-67434FC65F41} = {27B2BA11-026D-40A8-B50F-CADB1F9950C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8644EEF8-261E-47B2-83CF-DBA46EC8AB2D}

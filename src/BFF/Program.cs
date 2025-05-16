@@ -12,10 +12,10 @@ builder.Services.AddAuthorizationBuilder()
         policy.RequireClaim(ClaimConstants.Scope, builder.Configuration["AzureAdB2C:Scope"]!));
 
 builder.Services.AddHttpClient("inventory", c =>
-    c.BaseAddress = new Uri("http://localhost:3001/"));
+    c.BaseAddress = new Uri("http://localhost:81/"));
 
 builder.Services.AddHttpClient("payment", c =>
-    c.BaseAddress = new Uri("http://localhost:3002/"));
+    c.BaseAddress = new Uri("http://localhost:82/"));
 
 builder.Services.AddTransient<Func<string, HttpHandler>>(sp => clientName =>
 {
